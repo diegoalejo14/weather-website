@@ -25,7 +25,7 @@ weatherForm.addEventListener('submit',(e)=>{
       if(data.error){
         mensaje2.textContent=data.error
       }else{
-        mensaje2.textContent='En '+data.ciudad+' la temperatura es de '+data.forecastData.temperatura
+        mensaje2.textContent='En '+data.ciudad+' la temperatura es de '+data.forecastData.temperatura+'.'+'Se tiene una probabilidad de lluvia de '+(data.forecastData.probabilidadLluvia*100)+'%' 
 //        console.log(data.ciudad)
 // console.log(data.forecastData)
       }
