@@ -6,6 +6,8 @@ const forecast=require('./utils/forecast')
 
 
 const app=express()
+const port=process.env.PORT|| 3000
+
 const viewPaths=path.join(__dirname,'../templates/views')
 const partialPaths=path.join(__dirname,'../templates/partial')
 hbs.registerPartials(partialPaths)
@@ -98,6 +100,6 @@ app.get('*',(req,res)=>{
 
 
 
-app.listen(3000,()=>{
-  console.log('El servidor se esta iniciando')
+app.listen(port,()=>{
+  console.log('El servidor se esta iniciando por el puerto'+port)
 })

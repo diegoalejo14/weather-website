@@ -20,7 +20,7 @@ weatherForm.addEventListener('submit',(e)=>{
   e.preventDefault();
   mensaje2.textContent='Cargando'
   const ciudad=search.value;
-  fetch('http://localhost:3000/weather?ciudad='+ciudad).then((response)=>{
+  fetch('/weather?ciudad='+ciudad).then((response)=>{
     response.json().then((data)=>{
       if(data.error){
         mensaje2.textContent=data.error
